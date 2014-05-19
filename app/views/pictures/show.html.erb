@@ -1,10 +1,6 @@
 <h1>Picture Details</h1>
 
 <div>
-<a href="http://localhost:3000/delete_picture/<%= @the_picture.id %>">Delete this picture</a>
-<div>
-
-<div>
   <img src= "<%= @the_source %>" width="200">
 </div>
 
@@ -12,3 +8,15 @@
 <p>
 <%= @the_caption %>
 </p>
+
+
+<div>
+   <a href="/delete_picture/<%= @the_picture.id %>">Delete this picture</a>
+ </div>
+
+ <div>
+   <a href="/edit_picture_form/<%= @the_picture.id %>">Edit this picture</a>
+ </div>
+
+ <div>
+   <a href="/all_pictures">Full List</a>

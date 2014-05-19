@@ -25,9 +25,16 @@ redirect_to("/all_pictures")
 redirect_to("/all_pictures")
   end
 
- def destroy
+ def edit
 
   end
 
-
+  def update
+    @picture = Picture.find(params[:id])
+    @picture.caption = params[:caption]
+    @picture.source = params[:source]
+    @picture.save
+redirect_to("/picture_details/#{@picture.id}")
 end
+end
+
