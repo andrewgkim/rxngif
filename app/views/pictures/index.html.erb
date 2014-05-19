@@ -1,0 +1,11 @@
+<p>
+<% @list_of_pictures.inspect %>
+</p>
+
+<ul>
+
+<% @list_of_pictures.each do |pic| %>
+  <div>
+  <img src="<%= pic.source %>" width="200"></div>
+  <% end %>
+</ul>
